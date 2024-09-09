@@ -1,0 +1,347 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+:root {
+  --bgColor: #6b53ff;
+  --transparentBgColor: #6a53ff2a;
+  --componentBgColor: #252b6b;
+  --secondryComponentBgColor: #4292fa;
+  --textColor: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+  word-wrap: break-word;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+  background-color: var(--bgColor);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--textColor);
+  position: relative;
+}
+
+.inner-container {
+  width: 60%;
+  height: 90vh;
+  border-radius: 2px;
+  padding: 30px;
+  background-color: var(--componentBgColor);
+  box-shadow: inset;
+}
+
+.wallet {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.wallet .wallet-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 56px;
+  width: 100%;
+  height: 100%;
+}
+
+.wallet button {
+  background-color: var(
+    --secondryComponentBgColor
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 8px;
+  border-radius: 5px;
+  color: var(--textColor);
+  height: auto;
+  cursor: pointer;
+  width: 120px;
+  border: none;
+}
+
+.wallet .balance {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  font-size: 22px;
+  color: var(--textColor);
+}
+
+.wallet .image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wallet img {
+  width: 300px;
+}
+
+.wallet-address {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99999;
+  padding: 18px;
+  border-radius: 2px;
+  background-color: var(--bgColor);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: stretch;
+  gap: 12px;
+  width: 25%;
+  height: max-content;
+  box-shadow: 1px 1px 2px 2px #fff,
+    -1px -1px 2px 2px #fff;
+}
+
+.wallet-address .address-input {
+  border: none;
+  outline: none;
+  background-color: var(--componentBgColor);
+  word-wrap: break-word;
+  padding: 12px;
+  border-radius: 2px;
+  resize: none;
+  text-align: center;
+  font-size: 20px;
+  color: var(--textColor);
+}
+
+.wallet-address .address-input:focus {
+  border: none;
+  outline: none;
+}
+
+.blocks {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.blocks button {
+  background-color: var(
+    --secondryComponentBgColor
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 8px;
+  border-radius: 5px;
+  color: var(--textColor);
+  height: auto;
+  cursor: pointer;
+  width: 120px;
+  border: none;
+}
+
+.blocks img {
+  width: 100%;
+}
+
+.blocks-list {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  width: 55%;
+  height: 90%;
+  background-color: var(--transparentBgColor);
+  overflow-y: scroll;
+}
+
+.block-link {
+  background-color: var(
+    --secondryComponentBgColor
+  );
+  padding: 20px 14px;
+  border-radius: 2px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  color: var(--textColor);
+}
+
+.block {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 70vh;
+  text-align: center;
+  padding: 20px;
+  background-color: var(--bgColor);
+  border-radius: 10px;
+  color: var(--textColor);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  z-index: 99999;
+}
+
+.close-block {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  cursor: pointer;
+}
+
+/* conduct transction */
+
+.form {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.form input {
+  display: block;
+  width: 60%;
+  height: 60px;
+  padding-left: 8px;
+  margin: auto;
+  font-size: 22px;
+  border: none;
+  background-color: #eee;
+  color: #333;
+}
+
+.form input:focus {
+  border: none;
+  outline: none;
+}
+
+.form button {
+  background-color: var(
+    --secondryComponentBgColor
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 8px;
+  border-radius: 5px;
+  color: var(--textColor);
+  height: auto;
+  cursor: pointer;
+  width: 120px;
+  border: none;
+}
+
+.transaction-pool {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.transaction-pool button {
+  background-color: var(
+    --secondryComponentBgColor
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 8px;
+  border-radius: 5px;
+  color: var(--textColor);
+  height: auto;
+  cursor: pointer;
+  width: 120px;
+  border: none;
+}
+
+.transaction-map {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  justify-content: flex-start;
+  overflow-y: scroll;
+  width: 55%;
+}
+
+.transaction-map div {
+  width: 100%;
+  background-color: var(
+    --secondryComponentBgColor
+  );
+  border-radius: 2px;
+}
+
+.transaction {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 20px;
+  background-color: var(
+    --secondryComponentBgColor
+  );
+  border-radius: 2px;
+  padding: 10px 12px;
+  width: 100%;
+}
+
+/* crypto section */
+
+.cryptos {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: var(--componentBgColor);
+  height: 95vh;
+  width: 35%;
+  overflow-y: scroll;
+  border-radius: 2px;
+  padding: 12px;
+}
+
+.crypto-info {
+  background-color: var(--transparentBgColor);
+  border-radius: 2px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
